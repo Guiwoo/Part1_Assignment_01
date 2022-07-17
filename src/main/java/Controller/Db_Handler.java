@@ -6,8 +6,8 @@ import static Controller.Db_Utility.Wifi_History_table;
 import static Controller.Db_Utility.Wifi_Table;
 
 public class Db_Handler {
-    public Connection connection;
-    public void init(){
+    protected Connection connection;
+    protected void init(){
         try {
             // create a database connection
             connection = DriverManager.getConnection("jdbc:sqlite:sample.db");
@@ -17,7 +17,7 @@ public class Db_Handler {
             System.err.println(e.getMessage());
         }
     }
-    public void close(Connection connection) {
+    protected void close(Connection connection) {
         try {
             if (connection != null && !connection.isClosed()) {
                 connection.close();
@@ -27,7 +27,7 @@ public class Db_Handler {
         }
     }
 
-    public void createTables(){
+    protected void createTables(){
         init();
         try{
             PreparedStatement preparedStatement2 = connection.prepareStatement(Wifi_History_table);
@@ -41,7 +41,7 @@ public class Db_Handler {
         close(connection);
     }
 
-    public void close(PreparedStatement preparedStatement, ResultSet resultSet) {
+    protected void close(PreparedStatement preparedStatement, ResultSet resultSet) {
         try {
             if (resultSet != null && !resultSet.isClosed()) {
                 resultSet.close();

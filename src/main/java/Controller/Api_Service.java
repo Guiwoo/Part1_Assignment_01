@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Api_Service {
-    public List<List<Wifi_Entity>> list;
+    List<List<Wifi_Entity>> list;
     public static int totalPage;
     JsonArray[] arr;
     Gson g;
