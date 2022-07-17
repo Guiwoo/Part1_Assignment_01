@@ -1,0 +1,69 @@
+body{
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+a:hover{
+    transform: scale(1.05,1.05);
+    color: #00a587;
+}
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+th,td,tr{
+    border: 1px solid black;
+    text-align: center;
+}
+th{
+    background-color: #00a587;
+    color: whitesmoke;
+}
+
+.navigation_divder {
+    padding: 0px 10px;
+}
+
+/* Home button */
+.btn_div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.btn_div_lnt{
+    margin-left: 20px;
+}
+.btn{
+    margin: 0rem 0.3rem;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.noHover{
+    pointer-events: none;
+}
+
+.btn:hover{
+    transform: scale(1.05,1.05);
+    color: white;
+    background-color: #00a587;
+}
+
+.coordinate_box{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-left: 7px;
+    padding: 0.2rem 4rem 0.2rem 0.7rem;
+    text-align: left;
+    color: gray;
+    margin-right: 7px;
+}
+.info_home{
+    text-align: center;
+}
