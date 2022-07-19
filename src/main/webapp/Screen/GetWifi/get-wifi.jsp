@@ -12,7 +12,7 @@
     <%
         Class.forName("org.sqlite.JDBC");
         Wifi_Service w = new Wifi_Service();
-        w.main();
+        w.createWifi();
         out.write("<h1>"+ Api_Service.totalPage+" 개 의 정보를 정상적으로 저장 하였습니다.." +"</h1>");
     %>
         <div>

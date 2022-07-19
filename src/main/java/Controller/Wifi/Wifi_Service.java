@@ -11,11 +11,18 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Wifi_Service extends Db_Handler {
-    public void main(){
-        this.createTables();
-        createWifi();
+    public Wifi_Service(){
+        init();
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(Wifi_Entity.Wifi_Table);
+            int affected = preparedStatement.executeUpdate();
+            System.out.println(affected);
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        close(connection);
     }
-    private void createWifi(){
+    public void createWifi(){
         init();
         Api_Service a = new Api_Service();
         List<List<Wifi_Entity>> list = a.getData();

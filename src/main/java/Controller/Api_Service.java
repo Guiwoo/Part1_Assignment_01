@@ -19,7 +19,7 @@ public class Api_Service {
         list = new LinkedList<>();
         g = new Gson();
         API_KEY = System.getenv("API_KEY");
-        System.out.println("API_KEY is Updated");
+        System.out.println("API_KEY is Updated "+API_KEY);
         BASE_URL = String.format("http://openapi.seoul.go.kr:8088/%s/json/TbPublicWifiInfo/",API_KEY);
         setTotalPage();
     }
@@ -79,15 +79,18 @@ public class Api_Service {
     }
     public void setTotalPage(){
         try{
-            URL url = new URL(BASE_URL+"1/2");
+            URL url = new URL(BASE_URL+"1/5");
+            System.out.println(url);
             URLConnection request = url.openConnection();
             request.connect();
 
             JsonParser jp = new JsonParser();
             JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
             JsonObject rootobj = root.getAsJsonObject();
+            System.out.println(rootobj);
             String data = rootobj.get("TbPublicWifiInfo").getAsJsonObject().get("list_total_count").getAsString();
             totalPage = Integer.parseInt(data);
+            System.out.println(totalPage);
             int rest = totalPage%1000;
             arr = new JsonArray[(totalPage/1000)+1];
         }catch (IOException e){

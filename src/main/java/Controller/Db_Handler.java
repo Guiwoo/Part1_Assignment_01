@@ -2,8 +2,6 @@ package Controller;
 
 import java.sql.*;
 
-import static Controller.Db_Utility.Wifi_History_table;
-import static Controller.Db_Utility.Wifi_Table;
 
 public class Db_Handler {
     protected Connection connection;
@@ -25,20 +23,6 @@ public class Db_Handler {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    protected void createTables(){
-        init();
-        try{
-            PreparedStatement preparedStatement2 = connection.prepareStatement(Wifi_History_table);
-            PreparedStatement preparedStatement = connection.prepareStatement(Wifi_Table);
-            int affected = preparedStatement.executeUpdate();
-            int affected2 = preparedStatement2.executeUpdate();
-            System.out.println(affected2);
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-        close(connection);
     }
 
     protected void close(PreparedStatement preparedStatement, ResultSet resultSet) {
