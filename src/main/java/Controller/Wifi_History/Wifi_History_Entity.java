@@ -1,19 +1,15 @@
 package Controller.Wifi_History;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@RequiredArgsConstructor
 public class Wifi_History_Entity {
     private int id;
-    private double LAT ;
-    private double LNT;
-    private String DATE;
+    @NonNull private double LAT ;
+    @NonNull private double LNT;
+    @NonNull private String DATE;
 
-    public Wifi_History_Entity(double LAT, double LNT, String DATE) {
-        this.LAT = LAT;
-        this.LNT = LNT;
-        this.DATE = DATE;
-    }
 
     public void setId(int id) {
         this.id = id;

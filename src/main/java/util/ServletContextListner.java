@@ -5,8 +5,6 @@ import Controller.Db_Handler;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import java.io.File;
-import java.sql.*;
 
 @WebListener
 public class ServletContextListner implements ServletContextListener {
