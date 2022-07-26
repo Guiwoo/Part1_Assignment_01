@@ -1,5 +1,7 @@
 <%@ page import="Controller.Wifi.Wifi_Entity" %>
 <%@ page import="java.util.List" %>
+<%@ page import="Controller.Wifi_History.Wifi_History_Service" %>
+<%@ page import="Controller.Db_Handler" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div style="border: 1px solid black">
     <table>

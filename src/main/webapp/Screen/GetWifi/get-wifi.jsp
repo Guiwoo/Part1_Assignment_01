@@ -1,5 +1,6 @@
 <%@ page import="Controller.Wifi.Wifi_Service" %>
 <%@ page import="Controller.Api_Service" %>
+<%@ page import="Controller.Db_Handler" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

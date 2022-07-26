@@ -36,6 +36,9 @@ const handleClick =(e)=>{
 
 const handleGetAroundWifi =(e)=>{
     e.preventDefault();
+    if(latitudeBox.value.length <=0 || longitudeBox.value.length <= 0){
+        return null;
+    }
     window.location.href = "index.jsp?lat="+latitudeBox.value+"&lng="+longitudeBox.value;
 }
 

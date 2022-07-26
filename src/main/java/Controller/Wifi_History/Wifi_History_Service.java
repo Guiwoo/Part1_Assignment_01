@@ -9,17 +9,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Wifi_History_Service extends Db_Handler {
-    public Wifi_History_Service(){
-        init();
-        try{
-            PreparedStatement preparedStatement2 = connection.prepareStatement(Wifi_History_Entity.Wifi_History_table);
-            int affected2 = preparedStatement2.executeUpdate();
-        System.out.println(affected2);
-    }catch(SQLException e){
-        e.printStackTrace();
-    }
-        close(connection);
-    }
     public List<Wifi_History_Entity> getHistory(){
         List<Wifi_History_Entity> list = new LinkedList<>();
         String sql = "select * from wifi_history order by id desc";
