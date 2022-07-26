@@ -1,5 +1,8 @@
 package Controller.Wifi;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Wifi_Utility {
     public static final String CREATE_WIFI = "insert or replace into wifi(" +
             "X_SWIFI_MGR_NO," +
