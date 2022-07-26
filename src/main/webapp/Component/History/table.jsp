@@ -21,12 +21,12 @@
         List<Wifi_History_Entity> list = w.getHistory();
         for(Wifi_History_Entity x : list){
             out.write("<tr>");
-            out.write("<td>"+x.id+"</td>");
-            out.write("<td>"+x.LAT+"</td>");
-            out.write("<td>"+x.LNT+"</td>");
-            out.write("<td>"+x.DATE+"</td>");
+            out.write("<td>"+x.getId()+"</td>");
+            out.write("<td>"+x.getLAT()+"</td>");
+            out.write("<td>"+x.getLNT()+"</td>");
+            out.write("<td>"+x.getDATE()+"</td>");
             out.write("<td>");
-            out.write("<button id="+ x.id+" class=btn_history_delete>"+"히스토리 삭제"+"</button>");
+            out.write("<button id="+ x.getId()+" class=btn_history_delete>"+"히스토리 삭제"+"</button>");
             out.write("</td>");
             out.write("</tr>");
         }

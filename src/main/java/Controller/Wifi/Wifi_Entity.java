@@ -1,5 +1,8 @@
 package Controller.Wifi;
 
+import lombok.Data;
+
+@Data
 public class Wifi_Entity {
     public static final String Wifi_Table = "CREATE TABLE IF NOT EXISTS WIFI ("+
             "X_SWIFI_MGR_NO text primary key,\n" +
@@ -19,24 +22,23 @@ public class Wifi_Entity {
             "LNT real NULL,\n" +
             "WORK_DTTM text NULL" +
             ");";
-    public String X_SWIFI_MGR_NO	;
-    public String X_SWIFI_WRDOFC	;
-    public String X_SWIFI_MAIN_NM	;
-    public String X_SWIFI_ADRES1	;
-    public String X_SWIFI_ADRES2	;
-    public String X_SWIFI_INSTL_FLOOR;
-    public String X_SWIFI_INSTL_TY	;
-    public String X_SWIFI_INSTL_MBY	;
-    public String X_SWIFI_SVC_SE	;
-    public String X_SWIFI_CMCWR	;
-    public String X_SWIFI_CNSTC_YEAR	;
-    public String X_SWIFI_INOUT_DOOR	;
-    public String X_SWIFI_REMARS3	;
-    public double LAT;
-    public double LNT;
-    public String WORK_DTTM	;
-    public double distance;
-
+     private String X_SWIFI_MGR_NO	;
+     private String X_SWIFI_WRDOFC	;
+     private String X_SWIFI_MAIN_NM	;
+     private String X_SWIFI_ADRES1	;
+     private String X_SWIFI_ADRES2	;
+     private String X_SWIFI_INSTL_FLOOR;
+     private String X_SWIFI_INSTL_TY	;
+     private String X_SWIFI_INSTL_MBY	;
+     private String X_SWIFI_SVC_SE	;
+     private String X_SWIFI_CMCWR	;
+     private String X_SWIFI_CNSTC_YEAR	;
+     private String X_SWIFI_INOUT_DOOR	;
+     private String X_SWIFI_REMARS3	;
+     private double LAT;
+     private double LNT;
+     private String WORK_DTTM	;
+     private double distance;
     public Wifi_Entity(String x_SWIFI_MGR_NO, String x_SWIFI_WRDOFC, String x_SWIFI_MAIN_NM, String x_SWIFI_ADRES1, String x_SWIFI_ADRES2, String x_SWIFI_INSTL_FLOOR, String x_SWIFI_INSTL_TY, String x_SWIFI_INSTL_MBY, String x_SWIFI_SVC_SE, String x_SWIFI_CMCWR, String x_SWIFI_CNSTC_YEAR, String x_SWIFI_INOUT_DOOR, String x_SWIFI_REMARS3, double LAT, double LNT,
                        String WORK_DTTM) {
         X_SWIFI_MGR_NO = x_SWIFI_MGR_NO;

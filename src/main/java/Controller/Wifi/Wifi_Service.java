@@ -33,22 +33,22 @@ public class Wifi_Service extends Db_Handler {
                 PreparedStatement prep = connection.prepareStatement(sql);
                 for (int j = 0; j < list.get(i).size(); j++) {
                     Wifi_Entity w = list.get(i).get(j);
-                    prep.setString(1,w.X_SWIFI_MGR_NO);
-                    prep.setString(2,w.X_SWIFI_WRDOFC);
-                    prep.setString(3,w.X_SWIFI_MAIN_NM);
-                    prep.setString(4,w.X_SWIFI_ADRES1);
-                    prep.setString(5,w.X_SWIFI_ADRES2);
-                    prep.setString(6,w.X_SWIFI_INSTL_FLOOR);
-                    prep.setString(7,w.X_SWIFI_INSTL_TY);
-                    prep.setString(8,w.X_SWIFI_INSTL_MBY);
-                    prep.setString(9,w.X_SWIFI_SVC_SE);
-                    prep.setString(10,w.X_SWIFI_CMCWR);
-                    prep.setString(11,w.X_SWIFI_CNSTC_YEAR);
-                    prep.setString(12,w.X_SWIFI_INOUT_DOOR);
-                    prep.setString(13,w.X_SWIFI_REMARS3);
-                    prep.setDouble(14,w.LNT);
-                    prep.setDouble(15,w.LAT);
-                    prep.setString(16,w.WORK_DTTM);
+                    prep.setString(1,w.getX_SWIFI_MGR_NO());
+                    prep.setString(2,w.getX_SWIFI_WRDOFC());
+                    prep.setString(3,w.getX_SWIFI_MAIN_NM());
+                    prep.setString(4,w.getX_SWIFI_ADRES1());
+                    prep.setString(5,w.getX_SWIFI_ADRES2());
+                    prep.setString(6,w.getX_SWIFI_INSTL_FLOOR());
+                    prep.setString(7,w.getX_SWIFI_INSTL_TY());
+                    prep.setString(8,w.getX_SWIFI_INSTL_MBY());
+                    prep.setString(9,w.getX_SWIFI_SVC_SE());
+                    prep.setString(10,w.getX_SWIFI_CMCWR());
+                    prep.setString(11,w.getX_SWIFI_CNSTC_YEAR());
+                    prep.setString(12,w.getX_SWIFI_INOUT_DOOR());
+                    prep.setString(13,w.getX_SWIFI_REMARS3());
+                    prep.setDouble(14,w.getLNT());
+                    prep.setDouble(15,w.getLAT());
+                    prep.setString(16,w.getWORK_DTTM());
                     prep.addBatch();
                 }
                 prep.executeBatch();
